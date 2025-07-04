@@ -5,7 +5,7 @@ A modern, interactive web platform for running, visualizing, and debugging Pytho
 ---
 
 # DEMO : 
-[Link to my demo] https://prajwalpy.github.io/tutokenized-simulator/
+ https://prajwalpy.github.io/tutokenized-simulator/
 
 ## 🚀 Features
 

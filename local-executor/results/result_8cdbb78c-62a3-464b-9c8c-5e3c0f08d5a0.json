@@ -1,0 +1,67 @@
+{
+  "id": "8cdbb78c-62a3-464b-9c8c-5e3c0f08d5a0",
+  "success": true,
+  "output": "Hello World from Python!\r\n==============================\r\nAddition: 10 + 20 = 30\r\nMultiplication: 10 * 20 = 200\r\n\r\nCounting from 1 to 5:\r\n  Count: 1\r\n  Count: 2\r\n  Count: 3\r\n  Count: 4\r\n  Count: 5\r\n\r\nSimple function:\r\nHello, Python!\r\n? Test completed successfully!\r\n",
+  "error": "",
+  "execution_time": 0.139,
+  "timestamp": "2025-06-28T04:05:54.243Z",
+  "code": "print(\"Hello World from Python!\")\nprint(\"=\" * 30)\n\n# Simple calculations\na = 10\nb = 20\nsum_result = a + b\n\nprint(f\"Addition: {a} + {b} = {sum_result}\")\nprint(f\"Multiplication: {a} * {b} = {a * b}\")\n\n# Simple loop\nprint(\"\\nCounting from 1 to 5:\")\nfor i in range(1, 6):\n    print(f\"  Count: {i}\")\n\nprint(\"\\nSimple function:\")\ndef say_hello(name):\n    return f\"Hello, {name}!\"\n\nprint(say_hello(\"Python\"))\nprint(\"? Test completed successfully!\")",
+  "system_metrics": {
+    "cpu": {
+      "usage": 3,
+      "threads": 16,
+      "clockSpeed": 3.194,
+      "temperature": 0,
+      "model": "AMD Ryzen 7 5800H with Radeon Graphics         "
+    },
+    "memory": {
+      "total": 15,
+      "used": 14,
+      "free": 1,
+      "usage_percent": 93
+    },
+    "gpu": {
+      "usage": 38,
+      "memory_used": 632,
+      "memory_total": 6144,
+      "temperature": 48,
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "driver_version": "561.19"
+    },
+    "system": {
+      "platform": "win32",
+      "arch": "x64",
+      "uptime": 187860,
+      "loadavg": [
+        0,
+        0,
+        0
+      ],
+      "hostname": "PRANAV-PC"
+    }
+  },
+  "benchmarks": {
+    "matrix_multiplication": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "memory_access": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "cpu_intensive": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "io_operations": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "python_version": "Unknown",
+    "system_info": {}
+  }
+}

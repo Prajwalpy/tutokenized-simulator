@@ -1,0 +1,44 @@
+{
+  "id": "c0273a21-38ff-4713-9c77-0a71bee55888",
+  "success": false,
+  "output": "",
+  "error": "Command failed: python \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_c0273a21-38ff-4713-9c77-0a71bee55888.py\"\n\r\nA module that was compiled using NumPy 1.x cannot be run in\r\nNumPy 2.2.2 as it may crash. To support both 1.x and 2.x\r\nversions of NumPy, modules must be compiled with NumPy 2.0.\r\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\r\n\r\nIf you are a user of the module, the easiest solution will be to\r\ndowngrade to 'numpy<2' or try to upgrade the affected module.\r\nWe expect that some modules will need time to support NumPy 2.\r\n\r\nTraceback (most recent call last):  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_c0273a21-38ff-4713-9c77-0a71bee55888.py\", line 2, in <module>\r\n    import matplotlib.pyplot as plt\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\__init__.py\", line 161, in <module>\r\n    from . import _api, _version, cbook, _docstring, rcsetup\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\rcsetup.py\", line 27, in <module>\r\n    from matplotlib.colors import Colormap, is_color_like\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\colors.py\", line 57, in <module>\r\n    from matplotlib import _api, _cm, cbook, scale\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\scale.py\", line 22, in <module>\r\n    from matplotlib.ticker import (\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\ticker.py\", line 143, in <module>\r\n    from matplotlib import transforms as mtransforms\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\transforms.py\", line 49, in <module>\r\n    from matplotlib._path import (\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\numpy\\core\\_multiarray_umath.py\", line 44, in __getattr__\r\n    raise ImportError(msg)\r\nImportError: \r\nA module that was compiled using NumPy 1.x cannot be run in\r\nNumPy 2.2.2 as it may crash. To support both 1.x and 2.x\r\nversions of NumPy, modules must be compiled with NumPy 2.0.\r\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\r\n\r\nIf you are a user of the module, the easiest solution will be to\r\ndowngrade to 'numpy<2' or try to upgrade the affected module.\r\nWe expect that some modules will need time to support NumPy 2.\r\n\r\n\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_c0273a21-38ff-4713-9c77-0a71bee55888.py\", line 2, in <module>\r\n    import matplotlib.pyplot as plt\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\__init__.py\", line 161, in <module>\r\n    from . import _api, _version, cbook, _docstring, rcsetup\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\rcsetup.py\", line 27, in <module>\r\n    from matplotlib.colors import Colormap, is_color_like\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\colors.py\", line 57, in <module>\r\n    from matplotlib import _api, _cm, cbook, scale\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\scale.py\", line 22, in <module>\r\n    from matplotlib.ticker import (\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\ticker.py\", line 143, in <module>\r\n    from matplotlib import transforms as mtransforms\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\transforms.py\", line 49, in <module>\r\n    from matplotlib._path import (\r\nImportError: numpy.core.multiarray failed to import\r\n\n\r\nA module that was compiled using NumPy 1.x cannot be run in\r\nNumPy 2.2.2 as it may crash. To support both 1.x and 2.x\r\nversions of NumPy, modules must be compiled with NumPy 2.0.\r\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\r\n\r\nIf you are a user of the module, the easiest solution will be to\r\ndowngrade to 'numpy<2' or try to upgrade the affected module.\r\nWe expect that some modules will need time to support NumPy 2.\r\n\r\nTraceback (most recent call last):  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_c0273a21-38ff-4713-9c77-0a71bee55888.py\", line 2, in <module>\r\n    import matplotlib.pyplot as plt\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\__init__.py\", line 161, in <module>\r\n    from . import _api, _version, cbook, _docstring, rcsetup\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\rcsetup.py\", line 27, in <module>\r\n    from matplotlib.colors import Colormap, is_color_like\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\colors.py\", line 57, in <module>\r\n    from matplotlib import _api, _cm, cbook, scale\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\scale.py\", line 22, in <module>\r\n    from matplotlib.ticker import (\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\ticker.py\", line 143, in <module>\r\n    from matplotlib import transforms as mtransforms\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\transforms.py\", line 49, in <module>\r\n    from matplotlib._path import (\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\numpy\\core\\_multiarray_umath.py\", line 44, in __getattr__\r\n    raise ImportError(msg)\r\nImportError: \r\nA module that was compiled using NumPy 1.x cannot be run in\r\nNumPy 2.2.2 as it may crash. To support both 1.x and 2.x\r\nversions of NumPy, modules must be compiled with NumPy 2.0.\r\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\r\n\r\nIf you are a user of the module, the easiest solution will be to\r\ndowngrade to 'numpy<2' or try to upgrade the affected module.\r\nWe expect that some modules will need time to support NumPy 2.\r\n\r\n\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_c0273a21-38ff-4713-9c77-0a71bee55888.py\", line 2, in <module>\r\n    import matplotlib.pyplot as plt\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\__init__.py\", line 161, in <module>\r\n    from . import _api, _version, cbook, _docstring, rcsetup\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\rcsetup.py\", line 27, in <module>\r\n    from matplotlib.colors import Colormap, is_color_like\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\colors.py\", line 57, in <module>\r\n    from matplotlib import _api, _cm, cbook, scale\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\scale.py\", line 22, in <module>\r\n    from matplotlib.ticker import (\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\ticker.py\", line 143, in <module>\r\n    from matplotlib import transforms as mtransforms\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\site-packages\\matplotlib\\transforms.py\", line 49, in <module>\r\n    from matplotlib._path import (\r\nImportError: numpy.core.multiarray failed to import\r\n",
+  "execution_time": 0.447,
+  "timestamp": "2025-06-28T04:03:49.209Z",
+  "code": "import numpy as np\nimport matplotlib.pyplot as plt\n\n# Test data analysis\ndata = np.random.randn(100)\nmean_val = np.mean(data)\nstd_val = np.std(data)\n\nprint(f\"Data analysis results:\")\nprint(f\"Mean: {mean_val:.4f}\")\nprint(f\"Standard deviation: {std_val:.4f}\")\nprint(f\"Sample size: {len(data)}\")\n\n# Test that common libraries work\nprint(\"\\nLibrary test:\")\nprint(f\"NumPy version: {np.__version__}\")",
+  "system_metrics": {
+    "cpu": {
+      "usage": 3,
+      "threads": 16,
+      "clockSpeed": 3.194,
+      "temperature": 0,
+      "model": "AMD Ryzen 7 5800H with Radeon Graphics         "
+    },
+    "memory": {
+      "total": 15,
+      "used": 14,
+      "free": 1,
+      "usage_percent": 93
+    },
+    "gpu": {
+      "usage": 35,
+      "memory_used": 620,
+      "memory_total": 6144,
+      "temperature": 48,
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "driver_version": "561.19"
+    },
+    "system": {
+      "platform": "win32",
+      "arch": "x64",
+      "uptime": 187736,
+      "loadavg": [
+        0,
+        0,
+        0
+      ],
+      "hostname": "PRANAV-PC"
+    }
+  },
+  "benchmarks": null
+}

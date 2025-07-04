@@ -1,0 +1,58 @@
+name: Simple Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      VITE_EXECUTOR_TYPE: ${{ secrets.VITE_EXECUTOR_TYPE }}
+      VITE_TASK_QUEUE_URL: ${{ secrets.VITE_TASK_QUEUE_URL }}
+      VITE_RESULT_QUEUE_URL: ${{ secrets.VITE_RESULT_QUEUE_URL }}
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+      VITE_LOCAL_EXECUTOR_URL: ${{ secrets.VITE_LOCAL_EXECUTOR_URL }}
+      VITE_MAX_RETRIES: ${{ secrets.VITE_MAX_RETRIES }}
+      VITE_RETRY_DELAY: ${{ secrets.VITE_RETRY_DELAY }}
+      VITE_POLL_INTERVAL: ${{ secrets.VITE_POLL_INTERVAL }}
+      VITE_EXECUTION_TIMEOUT: ${{ secrets.VITE_EXECUTION_TIMEOUT }}
+      VITE_DEBUG_MODE: ${{ secrets.VITE_DEBUG_MODE }}
+      VITE_AUTO_REFRESH_STATUS: ${{ secrets.VITE_AUTO_REFRESH_STATUS }}
+      VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
+      CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_EXECUTOR_TYPE: ${{ secrets.VITE_EXECUTOR_TYPE }}
+          VITE_TASK_QUEUE_URL: ${{ secrets.VITE_TASK_QUEUE_URL }}
+          VITE_RESULT_QUEUE_URL: ${{ secrets.VITE_RESULT_QUEUE_URL }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_LOCAL_EXECUTOR_URL: ${{ secrets.VITE_LOCAL_EXECUTOR_URL }}
+          VITE_MAX_RETRIES: ${{ secrets.VITE_MAX_RETRIES }}
+          VITE_RETRY_DELAY: ${{ secrets.VITE_RETRY_DELAY }}
+          VITE_POLL_INTERVAL: ${{ secrets.VITE_POLL_INTERVAL }}
+          VITE_EXECUTION_TIMEOUT: ${{ secrets.VITE_EXECUTION_TIMEOUT }}
+          VITE_DEBUG_MODE: ${{ secrets.VITE_DEBUG_MODE }}
+          VITE_AUTO_REFRESH_STATUS: ${{ secrets.VITE_AUTO_REFRESH_STATUS }}
+          VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: ${{ secrets.CUSTOM_DOMAIN }}

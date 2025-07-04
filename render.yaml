@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tutokenized-queue-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python message_queue_api.py
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: API_KEY
+        generateValue: true
+      - key: MAX_TASK_AGE_HOURS
+        value: 24
+      - key: CLEANUP_INTERVAL_MINUTES
+        value: 60
+      - key: DEBUG
+        value: false
+    healthCheckPath: /health

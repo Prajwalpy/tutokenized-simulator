@@ -1,0 +1,44 @@
+{
+  "id": "d6b7348e-a75c-455c-94d1-c429a2669c51",
+  "success": false,
+  "output": "",
+  "error": "Command failed: python \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_d6b7348e-a75c-455c-94d1-c429a2669c51.py\"\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_d6b7348e-a75c-455c-94d1-c429a2669c51.py\", line 4, in <module>\r\n    print(\"\\U0001f680 Hello World from Python!\")\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n\nTraceback (most recent call last):\r\n  File \"C:\\Users\\thiru\\OneDrive\\Desktop\\azhack2-25\\tutokenized-simulator\\local-executor\\temp\\execution_d6b7348e-a75c-455c-94d1-c429a2669c51.py\", line 4, in <module>\r\n    print(\"\\U0001f680 Hello World from Python!\")\r\n  File \"C:\\Users\\thiru\\anaconda3\\Lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n",
+  "execution_time": 0.084,
+  "timestamp": "2025-06-28T04:12:29.576Z",
+  "code": "# Welcome to Python Execution!\n# Simple Hello World Example\n\nprint(\"🚀 Hello World from Python!\")\nprint(\"=\" * 40)\n\n# Basic calculations\nx = 15\ny = 25\nresult = x + y\nprint(f\"Calculation: {x} + {y} = {result}\")\n\n# Working with lists\nnumbers = [1, 2, 3, 4, 5]\nsquares = [n**2 for n in numbers]\nprint(f\"Numbers: {numbers}\")\nprint(f\"Squares: {squares}\")\n\n# Simple loop\nprint(\"\\nCounting:\")\nfor i in range(1, 6):\n    print(f\"Count {i}\")\n\n# Simple function\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(\"\\nGreetings:\")\nprint(greet(\"World\"))\nprint(greet(\"Python\"))\n\nprint(\"\\n✅ Execution completed successfully!\")\nprint(\"Check the Debug tab to see this output!\")",
+  "system_metrics": {
+    "cpu": {
+      "usage": 3,
+      "threads": 16,
+      "clockSpeed": 3.194,
+      "temperature": 0,
+      "model": "AMD Ryzen 7 5800H with Radeon Graphics         "
+    },
+    "memory": {
+      "total": 15,
+      "used": 14,
+      "free": 1,
+      "usage_percent": 93
+    },
+    "gpu": {
+      "usage": 30,
+      "memory_used": 781,
+      "memory_total": 6144,
+      "temperature": 53,
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "driver_version": "561.19"
+    },
+    "system": {
+      "platform": "win32",
+      "arch": "x64",
+      "uptime": 188256,
+      "loadavg": [
+        0,
+        0,
+        0
+      ],
+      "hostname": "PRANAV-PC"
+    }
+  },
+  "benchmarks": null
+}

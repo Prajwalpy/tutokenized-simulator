@@ -1,0 +1,81 @@
+# name: Deploy Frontend
+
+# on:
+#   push:
+#     branches: [ main, master ]
+#     paths:
+#       - 'src/**'
+#       - 'public/**'
+#       - 'package.json'
+#       - 'package-lock.json'
+#       - 'vite.config.ts'
+#       - 'tsconfig.json'
+#       - 'index.html'
+#       - '.env.production'
+#   workflow_dispatch:
+#     inputs:
+#       environment:
+#         description: 'Environment to deploy to'
+#         required: true
+#         default: 'production'
+#         type: choice
+#         options:
+#           - production
+#           - staging
+
+# jobs:
+#   build-and-deploy:
+#     name: Build and Deploy Frontend
+#     runs-on: ubuntu-latest
+#     env:
+#       CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
+#     steps:
+#       - name: 🛎️ Checkout Code
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#       - name: 📦 Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
+#           cache: 'npm'
+#       - name: 📥 Install Dependencies
+#         run: npm ci --prefer-offline --no-audit
+#       - name: 🔍 Lint Code
+#         run: npm run lint
+#       - name: 🏗️ Build Production Bundle
+#         run: npm run build
+#         env:
+#           VITE_EXECUTOR_TYPE: ${{ secrets.VITE_EXECUTOR_TYPE }}
+#           VITE_TASK_QUEUE_URL: ${{ secrets.VITE_TASK_QUEUE_URL }}
+#           VITE_RESULT_QUEUE_URL: ${{ secrets.VITE_RESULT_QUEUE_URL }}
+#           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+#           VITE_LOCAL_EXECUTOR_URL: ${{ secrets.VITE_LOCAL_EXECUTOR_URL }}
+#           VITE_MAX_RETRIES: ${{ secrets.VITE_MAX_RETRIES }}
+#           VITE_RETRY_DELAY: ${{ secrets.VITE_RETRY_DELAY }}
+#           VITE_POLL_INTERVAL: ${{ secrets.VITE_POLL_INTERVAL }}
+#           VITE_EXECUTION_TIMEOUT: ${{ secrets.VITE_EXECUTION_TIMEOUT }}
+#           VITE_DEBUG_MODE: ${{ secrets.VITE_DEBUG_MODE }}
+#           VITE_AUTO_REFRESH_STATUS: ${{ secrets.VITE_AUTO_REFRESH_STATUS }}
+#           VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
+#       - name: 📊 Build Analysis
+#         run: |
+#           echo "📈 Analyzing build output..."
+#           ls -la dist/
+#           echo "📦 Bundle size:"
+#           du -sh dist/
+#           echo "🗂️ Assets:"
+#           find dist/ -name "*.js" -o -name "*.css" | head -10
+#       - name: 🚀 Deploy to GitHub Pages
+#         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GH_PAGES_TOKEN }}
+#           publish_dir: ./dist
+#           publish_branch: main
+#       - name: 🎉 Deployment Success
+#         run: |
+#           echo "🎉 Frontend deployment completed successfully!"
+#           echo "📅 Deployed at: $(date)"
+#           echo "🔗 Commit: ${{ github.sha }}"
+#           echo "🌿 Branch: ${{ github.ref_name }}"

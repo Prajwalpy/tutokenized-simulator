@@ -1,0 +1,85 @@
+name: Preview Build
+
+on:
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.ts'
+      - 'tsconfig.json'
+      - 'index.html'
+
+jobs:
+  preview-build:
+    name: Build Preview
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🛎️ Checkout Code
+      uses: actions/checkout@v4
+
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: 📥 Install Dependencies
+      run: npm ci --prefer-offline --no-audit
+
+    - name: 🔍 Lint Code
+      run: npm run lint
+
+    - name: 🏗️ Build Development Bundle
+      run: npm run build:dev
+      env:
+        # Development/preview environment variables
+        VITE_EXECUTOR_TYPE: 'local'
+        VITE_LOCAL_EXECUTOR_URL: 'http://localhost:3001'
+        VITE_DEBUG_MODE: 'true'
+
+    - name: 📊 Build Analysis
+      run: |
+        echo "📈 Preview build analysis:"
+        ls -la dist/
+        du -sh dist/
+
+    - name: 💬 Comment PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          
+          // Get build size
+          const { execSync } = require('child_process');
+          const buildSize = execSync('du -sh dist/').toString().split('\t')[0];
+          
+          const comment = `## 🔧 Preview Build Status
+          
+          ✅ **Build Successful!**
+          
+          📦 **Bundle Size:** ${buildSize}
+          🔨 **Build Mode:** Development
+          📅 **Built:** ${new Date().toLocaleString()}
+          🔗 **Commit:** ${context.sha.substr(0, 7)}
+          
+          > This is a preview build for testing purposes.`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+
+    - name: 📁 Upload Preview Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: preview-build-${{ github.event.pull_request.number }}
+        path: dist/
+        retention-days: 7

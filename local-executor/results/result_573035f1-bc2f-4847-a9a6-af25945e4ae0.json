@@ -1,0 +1,67 @@
+{
+  "id": "573035f1-bc2f-4847-a9a6-af25945e4ae0",
+  "success": true,
+  "output": "Hello World!\r\n2 + 2 = 4\r\n",
+  "error": "",
+  "execution_time": 0.088,
+  "timestamp": "2025-06-28T04:06:03.192Z",
+  "code": "print(\"Hello World!\")\nprint(\"2 + 2 =\", 2 + 2)",
+  "system_metrics": {
+    "cpu": {
+      "usage": 3,
+      "threads": 16,
+      "clockSpeed": 3.194,
+      "temperature": 0,
+      "model": "AMD Ryzen 7 5800H with Radeon Graphics         "
+    },
+    "memory": {
+      "total": 15,
+      "used": 14,
+      "free": 1,
+      "usage_percent": 93
+    },
+    "gpu": {
+      "usage": 32,
+      "memory_used": 623,
+      "memory_total": 6144,
+      "temperature": 48,
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "driver_version": "561.19"
+    },
+    "system": {
+      "platform": "win32",
+      "arch": "x64",
+      "uptime": 187869,
+      "loadavg": [
+        0,
+        0,
+        0
+      ],
+      "hostname": "PRANAV-PC"
+    }
+  },
+  "benchmarks": {
+    "matrix_multiplication": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "memory_access": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "cpu_intensive": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "io_operations": {
+      "time": 0,
+      "score": 0,
+      "status": "N/A"
+    },
+    "python_version": "Unknown",
+    "system_info": {}
+  }
+}

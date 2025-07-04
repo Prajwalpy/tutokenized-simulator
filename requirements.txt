@@ -1,0 +1,13 @@
+# Requirements for SOL VM Python components and Message Queue API
+requests>=2.31.0
+psutil>=5.9.0
+flask>=2.3.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0
+
+# Additional dependencies for advanced compute workloads
+warp-lang
+matplotlib
+pyglet
+pillow>=10.0.0
+# usd-core
